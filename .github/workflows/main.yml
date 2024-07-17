@@ -1,0 +1,32 @@
+            - name: Create Issues
+  # You may pin to the exact commit or the version.
+  # uses: jayalfredprufrock/create-issues-action@c25c08105a3843aa34df294c0b45594813f06dd1
+  uses: jayalfredprufrock/create-issues-action@v1.2.1
+  with:
+    # Path or glob expression to templates. File names should be unique across directories.
+    template-path: # optional, default is .github/issues/**/*.md
+    # Indicates whether to follow symbolic links when globbing templates.
+    follow-symbolic-links: # optional, default is true
+    # The owner of the repo to create issues in if different than the context repo owner. Can be overridden in frontmatter with `repoOwner`
+    repo-owner: # optional
+    # The the repo name to create issues in if different than the context repo. Can be overridden in frontmatter with `repoName`
+    repo-name: # optional
+    # When set, issue will not be created until all issues with a smaller group number have been closed out. Can be overridden in frontmatter with `group`
+    group: # optional
+    # Comma separated list of labels to add to created issues. Will be merged with any labels specified in frontmatter with `labels`.
+    labels: # optional
+    # Comma separated list of assignees to add to created issues. Will be merged with any assignees specified in frontmatter with `assignees`.
+    assignees: # optional
+    # Milestone number to associate with created issues. Can be overridden in frontmatter with `milestone`.
+    milestone: # optional
+    # GitHub token or PAT with permissions to create issues and projects in the specified repos.
+    github-token: # optional, default is ${{ github.token }}
+    # The owner of the project if different than the context repo owner. Can be overridden in frontmatter with `projectOwner`
+    project-owner: # optional
+    # The number of the project (found in the url) if the issue should be added to the project. Can be overridden in frontmatter with `projectNumber`
+    project-number: # optional
+    # Stringified JSON object of fields/values to add to project items. Will be merged with any fields specified in frontmatter with `projectFields`.
+    project-fields: # optional
+    # GitHub PAT token to use solely for adding issues to projects. Will use `github-token` input if not present.
+    project-github-token: # optional
+          
